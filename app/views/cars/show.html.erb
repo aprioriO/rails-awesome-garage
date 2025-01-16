@@ -3,3 +3,15 @@
 <h3>Model: <%= @car.model %></h3>
 <p>Fuel type: <%= @car.fuel %></p>
 <p>Year: <%= @car.year %></p>
+
+<hr>
+<%= "Placeholder: this car is parked in your garage" %>
+<hr>
+
+<h3>New review</h3>
+<%= simple_form_for(@car, @review) do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :rating %>
+  <%= f.submit "Submit review", class = "btn btn-primary" %>
+<% end %>
+<hr>
