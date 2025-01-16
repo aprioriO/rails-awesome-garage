@@ -4,6 +4,6 @@ class Car < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :rewies
 
-  validates :brand, :model, :fuel, presence :true
-  validates :year, presence :true, numericality: {only_integer: true}
+  validates :brand, :model, :fuel, presence: true
+  validates :year, presence: true, numericality: {only_integer: true}
 end
