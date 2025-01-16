@@ -9,9 +9,16 @@
 <hr>
 
 <h3>New review</h3>
-<%= simple_form_for(@car, @review) do |f| %>
+<%= simple_form_for [@car, @review] do |f| %>
   <%= f.input :comment %>
   <%= f.input :rating %>
-  <%= f.submit "Submit review", class = "btn btn-primary" %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
 <% end %>
 <hr>
+
+<h3>Reviews:</h3>
+<% @car.reviews.each do |review|%>
+<p><%= review.comment %> </p>
+<p><%= review.rating %></p>
+<p>******************************</p>
+<% end %>
