@@ -49,8 +49,8 @@ review_9 = Review.create!(comment: some_comment.truncate(250), rating: rand(2..5
 review_10 = Review.create!(comment: some_comment.truncate(250), rating: rand(2..5.0).floor(1).to_i, car: car_1)
 
 puts "Creating new favorites..."
-favirite_1 = Favorite.create!(car: car_1)
-favirite_1 = Favorite.create!(car: car_1)
+favorite_1 = Favorite.create!(car: car_1)
+favorite_2 = Favorite.create!(car: car_2)
 
 puts "Done! Created #{Owner.count} owners!"
 puts "****************************************"

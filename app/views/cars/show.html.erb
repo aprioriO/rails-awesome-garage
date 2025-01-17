@@ -5,7 +5,13 @@
 <p>Year: <%= @car.year %></p>
 
 <hr>
-<%= "Placeholder: this car is parked in your garage" %>
+<% if @car.favorites.empty? %>
+  <%= simple_form_for [@car, @favorite] do |f| %>
+    <%= f.submit "Add car to garage", class: "btn btn-primary" %>
+  <% end %>
+<% else %>
+  <p>This car is already in your Garage</p>
+<% end %>
 <hr>
 
 <h3>New review</h3>
