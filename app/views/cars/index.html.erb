@@ -3,9 +3,9 @@
 <ul>
   <% @cars.each do |car| %>
     <li>
-      <%= car.brand %>
+      <%= link_to car_path(car), class: "category-link" do %>
+        <%= car.brand %>
+      <% end %>
     </li>
   <% end %>
 </ul>
-
-
